@@ -19,7 +19,7 @@ def user_input_features():
                      "Tiempo" : tiempo,
                      "Tipo" : tipo,
                      "Momento" : momento,
-                     "No. de personas" : no_Personas}
+                     "No. de personas" : no_personas}
 
   features = pd.DataFrame(user_input_data, index=[0])
   return features
