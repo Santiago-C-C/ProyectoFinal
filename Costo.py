@@ -42,7 +42,7 @@ LR.fit(X_train, y_train)
 b1 = LR.coef_
 b0 = LR.intercept_
 
-prediccion = (b0+ b1[0]*df["Presupuesto"] + b1[1]*df["Tiempo"] + b1[2]*df["Tipo"]+ b1[3]*["Momento"]+ b1[4]*["No. de personas"])
+prediccion = (b0+ b1[0]*df["Presupuesto"] + b1[1]*df["Tiempo"] + b1[2]*df["Tipo"]+ b1[3]*df["Momento"]+ b1[4]*df["No. de personas"])
 
 st.subheader('Cálculo del costo aproximado')
 st.write('El costo aproximado es: ', prediccion.values[0], "$")
