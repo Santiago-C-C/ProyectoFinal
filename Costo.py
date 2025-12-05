@@ -19,7 +19,7 @@ def user_input_features():
                      "Tiempo" : tiempo,
                      "Tipo" : tipo,
                      "Momento" : momento,
-                     "No. de personas" : no.Personas}
+                     "No. de personas" : no_Personas}
 
   features = pd.DataFrame(user_input_data, index=[0])
   return features
@@ -39,7 +39,7 @@ X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.30, random
 LR = LinearRegression()
 LR.fit(X_train, y_train)
 
-b = LR.coef_
+b1 = LR.coef_
 b0 = LR.intercept_
 
 prediccion = (b0+ b1[0]*df["Presupuesto"] + b1[1]*df["Tiempo"] + b1[2]*df["Tipo"]+ b1[3]*["Momento"]+ b1[4]*["No. de personas"])
